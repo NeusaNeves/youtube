@@ -3,9 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Youtube Neves</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.min.css
+    " rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
+    <header class="fixed top-0 right-0 left-0 bg-white z-50 px-4 py-2 flex items-center justify-between border-b border-gray-200">
+        <div class="flex items-center gap-4">
+
+            <button class="p-2 hover:bg-amber-200"><i class="ri-align-justify text-xl cursor-pointer"></i>
+            </button>
+
+            <div class="flex items-center gap-1 cursor-pointer">
+                <i class="ri-youtube-fill text-3xl text-pink-500"></i>
+                <span class="text-xl font-semibold">YouTube</span>
+                <span class="text-[10px] text-gray-600 ">BR</span>
+            </div>
+
+            <form class="flex-1 max-w-2xl mx-4 flex">
+                <input type="text" placeholder="Pesquisar" class="flex-1 px-4 py-2 border border-amber-200 rounded-l-full rounded-r-0">
+                <button class="px-6 py-4 bg-pink-50 border border-l-0 border-amber-200 rounded-r-full hover:bg-pink-100 cursor-pointer">
+                    <i class="ri-search-2-line"></i>
+                </button>
+                <button class="ml-2               px-5 py-2 bg-pink-50 rounded-full hover:bg-pink-100 cursor-pointer">
+                    <i class="ri-mic-2-line"></i>
+                </button>
+
+            </form>
+
+            <div class="flex items-center gap-2">
+                <button class="p-2 hover:bg-pink-100 rounded-full">
+                    <i class="ri-video-add-line text-xl"></i>
+                </button>
+                <button class="p-3 hover:bg-pink-100 rounded-full">
+                    <i class="ri-notification-3-line text-xl"></i>
+                </button>
+                <button class="ml-2 w-8 h-8 bg-purple-500 rounded-full text-white font-semibold">
+                    N
+                </button>
+            </div>
+        </div>
+    </header>
     
+    <div class="flex pt-14">
+        <aside class="fixed left-0 top-14 w-60 bg-white overflow-y-auto py-6">
+            <nav class="space-y-1">
+                <a href="#" class="flex items-center gap-6 px-6 py-2 bg-violet-100">
+                    <i class="ri-home-heart-line text-xl"></i>
+                    <span class="text-sm font-medium">Início</span>
+                </a>
+                <a href="#" class="flex items-center gap-6 px-6 py-2 hover:bg-violet-100">
+                    <i class="ri-compass-3-line text-xl"></i>
+                    <span class="text-sm font-medium">Início</span>
+                </a>
+                <a href="#" class="flex items-center gap-6 px-6 py-2 hover:bg-violet-100">
+                    <i class="ri-play-list-2-line text-xl"></i>
+                    <span class="text-sm font-medium">Inscrições</span>
+                </a>
+
+                <hr class="mx-6 my-3 text-violet-800">
+                
+                <a href="#" class="flex items-center gap-6 px-6 py-2 hover:bg-violet-100">
+                    <i class="ri-play-list-2-line text-xl"></i>
+                    <span class="text-sm font-medium">Histórico</span>
+                </a>
+                <a href="#" class="flex items-center gap-6 px-6 py-2 hover:bg-violet-100">
+                    <i class="ri-play-list-2-line text-xl"></i>
+                    <span class="text-sm font-medium">Assistir mais tarde</span>
+                </a>
+                <a href="#" class="flex items-center gap-6 px-6 py-2 hover:bg-violet-100">
+                    <i class="ri-play-list-2-line text-xl"></i>
+                    <span class="text-sm font-medium">Vídeos Marcados</span>
+                </a>
+                <hr class="mx-6 my-3 text-violet-800">
+            </nav>
+        </aside>
+    </div>
 </body>
 </html>
