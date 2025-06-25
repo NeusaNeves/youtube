@@ -1,6 +1,4 @@
 @import 'tailwindcss';
-@custom-variant dark (&:where(.dark, .dark *));
-@charset-UTF-8;
 
 body {
     font-family: "Sour Gummy", sans-serif;
