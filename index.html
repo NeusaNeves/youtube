@@ -7,6 +7,9 @@
     <title>Youtube Neves</title>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.min.css
     " rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
@@ -19,11 +22,13 @@
             <div class="flex items-center gap-1 cursor-pointer">
                 <i class="ri-youtube-fill text-3xl text-pink-500"></i>
                 <span class="text-xl font-semibold">YouTube</span>
-                <span class="text-[10px] text-gray-600 ">BR</span>
+                <span class="text-[10px] text-gray-600">BR</span>
             </div>
+        </div>
 
             <form class="flex-1 max-w-2xl mx-4 flex">
-                <input type="text" placeholder="Pesquisar" class="flex-1 px-4 py-2 border border-amber-200 rounded-l-full rounded-r-0">
+                <input type="text" placeholder="Pesquisar" 
+                class="flex-1 px-4 py-2 border border-amber-200 rounded-l-full rounded-r-0">
                 <button class="px-6 py-4 bg-pink-50 border border-l-0 border-amber-200 rounded-r-full hover:bg-pink-100 cursor-pointer">
                     <i class="ri-search-2-line"></i>
                 </button>
@@ -44,7 +49,6 @@
                     N
                 </button>
             </div>
-        </div>
     </header>
     
     <div class="flex pt-14">
@@ -66,20 +70,108 @@
                 <hr class="mx-6 my-3 text-violet-800">
                 
                 <a href="#" class="flex items-center gap-6 px-6 py-2 hover:bg-violet-100">
-                    <i class="ri-play-list-2-line text-xl"></i>
+                    <i class="ri-history-line text-xl"></i>
                     <span class="text-sm font-medium">Histórico</span>
                 </a>
                 <a href="#" class="flex items-center gap-6 px-6 py-2 hover:bg-violet-100">
-                    <i class="ri-play-list-2-line text-xl"></i>
+                    <i class="ri-time-line text-xl"></i>
                     <span class="text-sm font-medium">Assistir mais tarde</span>
                 </a>
                 <a href="#" class="flex items-center gap-6 px-6 py-2 hover:bg-violet-100">
-                    <i class="ri-play-list-2-line text-xl"></i>
+                    <i class="ri-thumb-up-line text-xl"></i>
                     <span class="text-sm font-medium">Vídeos Marcados</span>
                 </a>
+
                 <hr class="mx-6 my-3 text-violet-800">
+
+                <h3 class="px-6 py-2 text-sm font-medium text-gray-900">Inscrições</h3>
+
+                <a href="#" class="flex items-center gap-6 px-6 py-2 hover:bg-violet-100">
+                    <div class="w-6 h-6 bg-green-400 rounded-full"></div>
+                    <span class="text-sm font-medium">Maangchi</span>
+                </a>
+
+                <a href="#" class="flex items-center gap-6 px-6 py-2 hover:bg-violet-100">
+                    <div class="w-6 h-6 bg-blue-600 rounded-full"></div>
+                    <span class="text-sm font-medium">Curso em Vídeo</span>
+                </a>
+
+                <a href="#" class="flex items-center gap-6 px-6 py-2 hover:bg-violet-100">
+                    <div class="w-6 h-6 bg-yellow-400 rounded-full"></div>
+                    <span class="text-sm font-medium">HYBE LABELS</span>
+                </a>
+
+                <a href="#" class="flex items-center gap-6 px-6 py-2 hover:bg-violet-100">
+                    <div class="w-6 h-6 bg-black rounded-full"></div>
+                    <span class="text-sm font-medium">XG</span>
+                </a>
+
             </nav>
         </aside>
+
+        <main class="flex-1 ml-60 p-6">
+            <div class="flex gap-3 mb-6 overflow-x-auto pb-2 pt-4">
+                <button class="px-3 py-1 bg-gray-900 text-white rounded-lg text-sm whitespace-nowrap cursor-pointer hover:bg-pink-600">Tudo</button>
+                <button class="px-3 py-1 bg-gray-100 text-black rounded-lg text-sm whitespace-nowrap cursor-pointer hover:bg-pink-400">Música</button>
+                <button class="px-3 py-1 bg-gray-100 text-black rounded-lg text-sm whitespace-nowrap cursor-pointer hover:bg-pink-400">Filmes</button>
+                <button class="px-3 py-1 bg-gray-100 text-black rounded-lg text-sm whitespace-nowrap cursor-pointer hover:bg-pink-400">Jogo</button>
+                <button class="px-3 py-1 bg-gray-100 text-black rounded-lg text-sm whitespace-nowrap cursor-pointer hover:bg-pink-400">Programação</button>
+                <button class="px-3 py-1 bg-gray-100 text-black rounded-lg text-sm whitespace-nowrap cursor-pointer hover:bg-pink-400">Poadcast</button>
+                <button class="px-3 py-1 bg-gray-100 text-black rounded-lg text-sm whitespace-nowrap cursor-pointer hover:bg-pink-400">Culinária</button>
+                <button class="px-3 py-1 bg-gray-100 text-black rounded-lg text-sm whitespace-nowrap cursor-pointer hover:bg-pink-400">Notícias</button>
+                <button class="px-3 py-1 bg-gray-100 text-black rounded-lg text-sm whitespace-nowrap cursor-pointer hover:bg-pink-400">Esportes</button>
+                
+            </div>
+
+            <div class="grid grid-cols-4 gap-4" id="videos"></div>
+        </main>
     </div>
 </body>
+<script>
+    const videos = [
+        {title:"Curso de HTML", channel:"Curso em Vídeo", views:"130mil", time:"há 1 ano", duration:"25:36", color:"red", isLive: false},
+        {title:"Curso de HTML", channel:"Curso em Vídeo", views:"130mil", time:"há 1 ano", duration:"25:36", color:"red", isLive: false},
+        {title:"Curso de HTML", channel:"Curso em Vídeo", views:"130mil", time:"há 1 ano", duration:"25:36", color:"red", isLive: false},
+        {title:"Curso de HTML", channel:"Curso em Vídeo", views:"130mil", time:"há 1 ano", duration:"25:36", color:"red", isLive: false},
+        {title:"Curso de HTML", channel:"Curso em Vídeo", views:"130mil", time:"há 1 ano", duration:"25:36", color:"red", isLive: false},
+        {title:"Curso de HTML", channel:"Curso em Vídeo", views:"130mil", time:"há 1 ano", duration:"25:36", color:"red", isLive: false},
+        {title:"Curso de HTML", channel:"Curso em Vídeo", views:"130mil", time:"há 1 ano", duration:"25:36", color:"red", isLive: false},
+        {title:"Curso de HTML", channel:"Curso em Vídeo", views:"130mil", time:"há 1 ano", duration:"25:36", color:"red", isLive: false},
+        {title:"Curso de HTML", channel:"Curso em Vídeo", views:"130mil", time:"há 1 ano", duration:"25:36", color:"red", isLive: false},
+        {title:"Curso de HTML", channel:"Curso em Vídeo", views:"130mil", time:"há 1 ano", duration:"25:36", color:"red", isLive: false},
+        {title:"Curso de HTML", channel:"Curso em Vídeo", views:"130mil", time:"há 1 ano", duration:"25:36", color:"red", isLive: false},
+        {title:"Curso de HTML", channel:"Curso em Vídeo", views:"130mil", time:"há 1 ano", duration:"25:36", color:"red", isLive: false},
+        {title:"Curso de HTML", channel:"Curso em Vídeo", views:"130mil", time:"há 1 ano", duration:"25:36", color:"red", isLive: false},
+        {title:"Curso de HTML", channel:"Curso em Vídeo", views:"130mil", time:"há 1 ano", duration:"25:36", color:"red", isLive: false},
+        {title:"Curso de HTML", channel:"Curso em Vídeo", views:"130mil", time:"há 1 ano", duration:"25:36", color:"red", isLive: false},
+        {title:"Curso de HTML", channel:"Curso em Vídeo", views:"130mil", time:"há 1 ano", duration:"25:36", color:"red", isLive: false}, 
+    ];
+
+    const container = document.getElementById("videos")
+
+    videos.forEach(
+        (video, i) => {
+            const videoCard = document.createElement('article');
+
+            videoCard.className = 'cursor-pointer'
+
+            videoCard.innerHTML = `
+            <div class="relative bg-amber-200 rounded-xl overflow-y-hidden">
+                <img src="https://picsum.photos/320/180?random=${i}" class="w-full h-full object-cover">
+                <span class="absolute bottom-2 right-2 bg-black bg-opacity-80 text-white text-xs px-1 rounded">${video.duration}</span>
+            </div>
+            <div class="flex gap-3 mt-3">
+                <div>
+                    <h3 class="font-medium text-base">${video.title}</h3>
+                    <p class="text-sm text-gray-600 mt-1">${video.channel}</p>
+                    <p class="text-sm text-gray-600">${video.views}</p>
+                    </div>
+            </div>
+            `        
+            container.appendChild(videoCard)
+        })
+
+    // 
+
+</script>
 </html>
